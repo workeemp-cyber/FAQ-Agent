@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" id="logoMark">HS</div>
+        <div>
+          <h1 id="companyName">Helix Support</h1>
+          <p>Agent workspace</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="/">Chat</a>
+        <a class="active" href="/dashboard">Dashboard</a>
+      </nav>
+      <div class="side-note">
+        Check a query when it is handled. Uncheck it if it needs work again.
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h2>Query dashboard</h2>
+          <p>Review chats, mark done, and pick up escalations.</p>
+        </div>
+        <div class="badge">Live inbox</div>
+      </div>
+      <section class="stats">
+        <div class="card stat"><span>Total queries</span><strong id="totalCount">0</strong></div>
+        <div class="card stat"><span>Checked</span><strong id="checkedCount">0</strong></div>
+        <div class="card stat"><span>Open</span><strong id="openCount">0</strong></div>
+        <div class="card stat"><span>Escalated</span><strong id="escalatedCount">0</strong></div>
+      </section>
+      <section class="card table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Done</th>
+              <th>Query</th>
+              <th>Answer</th>
+              <th>Status</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="queryRows"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

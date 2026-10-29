@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Support Chat</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" id="logoMark">HS</div>
+        <div>
+          <h1 id="companyName">Helix Support</h1>
+          <p>Customer assistant</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="active" href="/">Chat</a>
+        <a href="/dashboard">Dashboard</a>
+      </nav>
+      <div class="side-note">
+        Answers come from your FAQ knowledge base. Unresolved questions are sent to the dashboard for a teammate.
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h2>Support chat</h2>
+          <p>Ask about billing, plans, shipping, or accounts.</p>
+        </div>
+        <div class="badge">Online</div>
+      </div>
+      <section class="card chat-card">
+        <div class="messages" id="messages"></div>
+        <div class="suggestions">
+          <button class="chip" data-q="How do I reset my password?">Reset password</button>
+          <button class="chip" data-q="What payment methods do you accept?">Payment methods</button>
+          <button class="chip" data-q="I want to talk to a human agent">Talk to a human</button>
+        </div>
+        <form class="composer" id="chatForm">
+          <input id="messageInput" autocomplete="off" placeholder="Type your question..." />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
